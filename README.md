@@ -6,6 +6,12 @@ Inject freedom into science publisher websites, with style.
 
 Please contribute new websites!
 
+## Usage
+
+* Chrome/Chromium: see instructions below.
+* Firefox: https://addons.mozilla.org/en-US/firefox/addon/sci-hub-injector/
+* Brave: should work when you replace `chrome://extensions` with `brave://extensions`. Not tested.
+
 ## Supported sites
 
 - PubMed
@@ -45,9 +51,11 @@ https://stackoverflow.com/questions/24577024/install-chrome-extension-form-outsi
 
 Thanks!
 
-## Info for lawyers and other people in suits (and everyone else)
+## Important legal notice
 
-Since this is getting some traction, I don't recommend doing things that go against whatever laws that apply where you are. This is the user's reponsibility.
+I don't recommend doing things that go against whatever laws that apply where you are. I condemn illegal activities. This is the user's reponsibility. SciHub is not affiliated in any way with this project.
+
+---
 
 Next, I'll quote a hero of mine, Aaron Swartz:
 
