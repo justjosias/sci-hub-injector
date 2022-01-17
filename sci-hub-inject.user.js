@@ -12,6 +12,7 @@
 // @include https://www.science.org/*
 // @include https://dom-pubs.onlinelibrary.wiley.com/doi/*
 // @include https://link.springer.com/*
+// @include https://journals.sagepub.com/*
 // ==/UserScript==
 
 function sciHubLink(doi) {
@@ -189,6 +190,16 @@ function springerLinkGeneral(doi) {
   `;
 }
 
+function sagePub() {
+  const doi = document.querySelector("meta[scheme='doi']").getAttribute("content");
+  const menu = document.querySelector(".pdf-wrapper");
+  menu.innerHTML += `
+  <div id="menu-ao" role="button" class="articleToolsButton redButton smallButton">
+    <a href="${sciHubLink(doi)}" title="SciHub"><span>Access via SciHub <img width=20 height=20 src="https://sci-hub.se/misc/img/ravenround.gif" style="width:20px; vertical-align: middle;"/></span></a>
+  </div>
+	`;
+}
+
 function addSciHubLink() {
   const url = document.location.href;
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
@@ -207,6 +218,8 @@ function addSciHubLink() {
     wiley();
   } else if (url.includes("link.springer.com")) {
     springerLink();
+  } else if (url.includes("journals.sagepub.com")) {
+    sagePub();
   }
 }
 
