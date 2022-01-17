@@ -17,6 +17,7 @@ Please contribute new websites!
 - PubMed
 - Nature
 - Taylor and Francis
+- DeGruyter
 - Elsevier / ScienceDirect
 - Eureka Select
 - Science
