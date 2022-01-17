@@ -13,6 +13,7 @@
 // @include https://dom-pubs.onlinelibrary.wiley.com/doi/*
 // @include https://link.springer.com/*
 // @include https://journals.sagepub.com/*
+// @include https://www.degruyter.com/*
 // ==/UserScript==
 
 function sciHubLink(doi) {
@@ -200,6 +201,29 @@ function sagePub() {
 	`;
 }
 
+function deGruyter() {
+  const url = document.location.href;
+
+  if (url.includes("/document/")) {
+    const doi = document.querySelector("meta[name='citation_doi']").getAttribute("content");
+    const menu = document.querySelector("#docContent > div.offset-lg-1.col-lg-8.pb-2 > div.container-fluid.mx-2.d-flex.align-items-center.flex-wrap");
+    menu.innerHTML += `
+    <button id="citationsModalButton" type="button" class="btn btn-main-content ga_cite_this mr-2" aria-controls="citationsModal"><a href="${sciHubLink(doi)}">Access on SciHub</a>
+    </button>
+    `;
+
+  } else if (url.includes("/journal/"))
+  {
+    const citeButtons = document.querySelectorAll('.searchResultActions');
+    for (const citeButton of citeButtons) {
+      citeButton.innerHTML += `
+      <button id="citationsModalButton" type="button" class="btn btn-main-content ga_cite_this mr-2" aria-controls="citationsModal"><a href="${sciHubLink(citeButton.getAttribute('data-doi'))}">Access on SciHub</a>
+      </button>
+      `
+    }
+  }
+}
+
 function addSciHubLink() {
   const url = document.location.href;
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
@@ -220,6 +244,8 @@ function addSciHubLink() {
     springerLink();
   } else if (url.includes("journals.sagepub.com")) {
     sagePub();
+  } else if (url.includes("degruyter.com")) {
+    deGruyter();
   }
 }
 
