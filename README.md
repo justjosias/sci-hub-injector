@@ -20,6 +20,7 @@ Please contribute new websites!
 - DeGruyter
 - Elsevier / ScienceDirect
 - Eureka Select
+- SagePub
 - Science
 - SpringerLink
 
