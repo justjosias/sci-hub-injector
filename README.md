@@ -20,12 +20,12 @@ Please contribute new websites!
 - DeGruyter
 - Elsevier / ScienceDirect
 - Eureka Select
+- IEEEXPLORE
 - SagePub
 - Science
 - SpringerLink
-- IEEEXPLORE
-- SagePub
-- DeGruyter
+- Wiley
+
 
 ## Screenshots
 
