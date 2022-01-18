@@ -206,6 +206,9 @@ function ieeexploreLink() {
             <div class="main-txt"> SciHub </div>
         </button>
     `;
+  }
+
+  
 function sagePub() {
   const doi = document.querySelector("meta[scheme='doi']").getAttribute("content");
   const menu = document.querySelector(".pdf-wrapper");
