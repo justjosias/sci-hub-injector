@@ -14,7 +14,9 @@
         "http://www.eurekaselect.com/*",
         "https://www.science.org/*",
         "https://dom-pubs.onlinelibrary.wiley.com/doi/*",
-        "https://link.springer.com/*"
+        "https://link.springer.com/*",
+        "https://journals.sagepub.com/*",
+        "https://www.degruyter.com/*"
       ],
       "js": ["sci-hub-inject.user.js"]
     }
