@@ -23,6 +23,9 @@ Please contribute new websites!
 - SagePub
 - Science
 - SpringerLink
+- IEEEXPLORE
+- SagePub
+- DeGruyter
 
 ## Screenshots
 
