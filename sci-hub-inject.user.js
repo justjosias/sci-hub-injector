@@ -12,6 +12,7 @@
 // @include https://www.science.org/*
 // @include https://dom-pubs.onlinelibrary.wiley.com/doi/*
 // @include https://link.springer.com/*
+// @include https://ieeexplore.ieee.org/*
 // ==/UserScript==
 
 function sciHubLink(doi) {
@@ -189,6 +190,22 @@ function springerLinkGeneral(doi) {
   `;
 }
 
+function ieeexploreLink() {
+    let foundLinks = [];
+    document.querySelectorAll("a").forEach(l => {
+        if (l.href.includes("doi.org")) {
+            foundLinks.push(l.href);
+        }
+    });
+    const doi = foundLinks[0].split(".org/")[1];
+    const node = document.querySelectorAll(".document-banner > button")[0];
+    node.outerHTML += `
+        <button class="sip-modal-button stats-document-banner-viewDocument" onClick="window.open('${sciHubLink(doi)}', '__blank__')">
+            <div class="main-txt"> SciHub </div>
+        </button>
+    `;
+}
+
 function addSciHubLink() {
   const url = document.location.href;
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
@@ -207,6 +224,8 @@ function addSciHubLink() {
     wiley();
   } else if (url.includes("link.springer.com")) {
     springerLink();
+  } else if (url.includes("ieeexplore.ieee.org/")) {
+    ieeexploreLink();
   }
 }
 
