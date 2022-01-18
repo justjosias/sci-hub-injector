@@ -266,4 +266,4 @@ function addSciHubLink() {
   }
 }
 
-addSciHubLink()
+addSciHubLink();
