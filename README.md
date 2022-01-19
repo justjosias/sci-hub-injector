@@ -56,4 +56,4 @@ Thanks!
 
 ## Legal notice
 
-This project is not affliated in any way with SciHub. The copyright status of downloaded articles is the user's responsibility and not that of the maker of this addon.
+This project is not affliated in any way with SciHub. The copyright status of downloaded articles is the user's responsibility and not that of the developers of this addon.
