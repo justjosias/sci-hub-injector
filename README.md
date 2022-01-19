@@ -2,14 +2,14 @@
 
 Adds SciHub links to popular publisher websites to make accessing science even easier!
 
-Inject freedom into science publisher websites, with style.
+Inject free access into science publisher websites, with style.
 
 Please contribute new websites!
 
 ## Usage
 
 * Chrome/Chromium: see instructions below.
-* Firefox: https://addons.mozilla.org/en-US/firefox/addon/sci-hub-injector/
+* Firefox: https://addons.mozilla.org/en-US/firefox/addon/scihub-injector/ (submitted)
 * Brave: should work when you replace `chrome://extensions` with `brave://extensions`. Not tested.
 
 ## Supported sites
@@ -51,12 +51,6 @@ https://stackoverflow.com/questions/24577024/install-chrome-extension-form-outsi
 
 Thanks!
 
-## Important legal notice
+## Legal notice
 
-I don't recommend doing things that go against whatever laws that apply where you are. I condemn illegal activities. This is the user's reponsibility. SciHub is not affiliated in any way with this project.
-
----
-
-Next, I'll quote a hero of mine, Aaron Swartz:
-
-> [There is no justice in following unjust laws](https://openaccessmanifesto.wordpress.com).
+This project is not affliated in any way with SciHub. The copyright status of downloaded articles is the user's responsibility and not that of the maker of this addon.
