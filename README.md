@@ -54,6 +54,12 @@ https://stackoverflow.com/questions/24577024/install-chrome-extension-form-outsi
 
 Thanks!
 
+## Mirrors and Forks
+
+* [justjosias](https://github.com/justjosias/sci-hub-injector) (also at [Codeberg](https://codeberg.org/josias/sci-hub-injector) and [Josias's personal cgit](https://git.josias.dev/sci-hub-injector))
+* [hilbertspace05](https://github.com/hilbertspace05/sci-hub-injector)
+* [Original by rickwierenga](https://github.com/rickwierenga/sci-hub-injector) (removed)
+
 ## Legal notice
 
 This project is not affliated in any way with SciHub. The copyright status of downloaded articles is the user's responsibility and not that of the developers of this addon.
