@@ -8,9 +8,12 @@ Please contribute new websites!
 
 ## Usage
 
+* [Userscript](https://github.com/justjosias/sci-hub-injector/raw/main/sci-hub-inject.user.js) (for any browser with [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) or [Tampermonkey](https://www.tampermonkey.net/) installed)
 * Chrome/Chromium: see instructions below.
 * Firefox: https://addons.mozilla.org/en-US/firefox/addon/scihub-injector/ (submitted)
 * Brave: should work when you replace `chrome://extensions` with `brave://extensions`. Not tested.
+
+The userscript is recommended, since you can use it without it being approved by Mozilla or Google.
 
 ## Supported sites
 
