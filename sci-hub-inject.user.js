@@ -99,6 +99,33 @@ function eurekaSelect() {
   `;
 }
 
+function researchGate() {
+  const doiLinks = Array.from(document.querySelectorAll("a"))
+    .filter((a) => a.href.includes("doi.org"))
+    .map((a) => a.href);
+  const doi = doiLinks[0].split(".org/")[1];
+
+  const menu = document.querySelector(".research-resources-summary__actions");
+  const dropdown = menu.querySelector(".research-resources-summary__dropdown");
+
+  const element = document.createElement("div");
+  element.className = ("nova-legacy-l-flex__item hide-l")
+  element.innerHTML += `
+  <div class="nova-legacy-l-flex__item hide-l">
+    <a
+      class="nova-legacy-c-button nova-legacy-c-button--align-center nova-legacy-c-button--radius-m nova-legacy-c-button--size-m nova-legacy-c-button--color-blue nova-legacy-c-button--theme-ghost nova-legacy-c-button--width-auto js-lite-click"
+      href="${sciHubLink(doi)}"
+    >
+      <img height="20" src="https://sci-hub.se/misc/img/ravenround.gif" />
+      <span class="nova-legacy-c-button__label gtm-copy-link-btn">
+        <span>Access on Sci-Hub</span>
+      </span>
+    </a>
+  </div>
+  `;
+  menu.insertBefore(element, dropdown);
+}
+
 function science() {
   const doiLinks = Array.from(document.querySelectorAll("a"))
     .filter((a) => a.href.includes("doi.org"))
@@ -231,6 +258,8 @@ function addSciHubLink() {
     springerLink();
   } else if (url.includes("jstor.org")) {
     jstor();
+  } else if (url.includes("researchgate.net")) {
+    researchGate();
   }
 }
 

@@ -15,7 +15,8 @@
         "https://www.science.org/*",
         "https://dom-pubs.onlinelibrary.wiley.com/doi/*",
         "https://link.springer.com/*",
-        "https://www.jstor.org/*"
+        "https://www.jstor.org/*",
+        "https://www.researchgate.net/*"
       ],
       "js": ["sci-hub-inject.user.js"]
     }
