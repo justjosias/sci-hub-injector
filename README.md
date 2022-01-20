@@ -62,6 +62,7 @@ Thanks!
 
 * [justjosias](https://github.com/justjosias/sci-hub-injector) (also at [Codeberg](https://codeberg.org/josias/sci-hub-injector) and [Josias's personal cgit](https://git.josias.dev/sci-hub-injector))
 * [hilbertspace05](https://github.com/hilbertspace05/sci-hub-injector)
+* [ghxm](https://github.com/ghxm/sci-hub-injector)
 * [Original by rickwierenga](https://github.com/rickwierenga/sci-hub-injector) (removed)
 
 ## Legal notice
