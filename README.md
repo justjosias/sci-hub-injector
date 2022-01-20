@@ -9,11 +9,11 @@ Please contribute new websites!
 ## Usage
 
 * [Userscript](https://github.com/justjosias/sci-hub-injector/raw/main/sci-hub-inject.user.js) (for any browser with [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) or [Tampermonkey](https://www.tampermonkey.net/) installed)
-* Chrome/Chromium: see instructions below.
-* Firefox: https://addons.mozilla.org/en-US/firefox/addon/scihub-injector/ (submitted)
-* Brave: should work when you replace `chrome://extensions` with `brave://extensions`. Not tested.
+* Firefox: https://addons.mozilla.org/en-US/firefox/addon/scihub-injector/
+* Chrome/Chromium: [see instructions below](#chromium-installation)
+* Brave and Edge: see Chromium instructions
 
-The userscript is recommended, since you can use it without it being approved by Mozilla or Google.
+The userscript is recommended, since you can use it without it being approved by Mozilla or Google and still get automatic updates.
 
 ## Supported sites
 
@@ -30,7 +30,9 @@ The userscript is recommended, since you can use it without it being approved by
 ![PubMed Screenshot](.github/pubmed.png)
 ![Nature Screenshot](.github/nature.png)
 
-## Installation
+## Chromium Installation
+
+These instructions should work for most browsers based on Chromium, including Chrome, Brave, and Edge when you replace `chrome://extensions` with `brave://extensions`, `edge://extensions`, or equivalent.
 
 1. Visit `chrome://extensions` (via omnibox or menu -> Tools -> Extensions).
 2. Enable Developer mode by ticking the checkbox in the upper-right corner.
