@@ -20,12 +20,16 @@ The userscript is recommended, since you can use it without it being approved by
 - PubMed
 - Nature
 - Taylor and Francis
+- DeGruyter
 - Elsevier / ScienceDirect
 - Eureka Select
+- IEEEXPLORE
+- SagePub
 - Science
 - SpringerLink
 - JSTOR
 - ResearchGate
+- Wiley
 
 ## Screenshots
 

@@ -16,7 +16,11 @@
         "https://dom-pubs.onlinelibrary.wiley.com/doi/*",
         "https://link.springer.com/*",
         "https://www.jstor.org/*",
-        "https://www.researchgate.net/*"
+        "https://www.researchgate.net/*",
+        "https://journals.sagepub.com/*",
+        "https://www.degruyter.com/*",
+        "https://ieeexplore.ieee.org/*",
+        "https://journals.sagepub.com/*"
       ],
       "js": ["sci-hub-inject.user.js"]
     }
