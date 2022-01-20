@@ -12,6 +12,8 @@
 // @include https://www.science.org/*
 // @include https://dom-pubs.onlinelibrary.wiley.com/doi/*
 // @include https://link.springer.com/*
+// @include https://www.jstor.org/*
+// @include https://www.researchgate.net/*
 // ==/UserScript==
 
 function sciHubLink(doi) {
