@@ -24,6 +24,7 @@ The userscript is recommended, since you can use it without it being approved by
 - Eureka Select
 - Science
 - SpringerLink
+- JSTOR
 
 ## Screenshots
 

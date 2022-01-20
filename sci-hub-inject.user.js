@@ -117,6 +117,28 @@ function science() {
   `;
 }
 
+/* In honor of Aaron Swartz */
+function jstor() {
+  const doi = document.querySelector("[data-doi]").attributes.getNamedItem("data-doi").value;
+
+  const menu = document.querySelector(".access-buttons");
+  const element = document.createElement("div");
+  element.innerHTML = `
+  <a class="primary-access" data-sc="turnaway-inst-login" href="${sciHubLink(doi)}">
+    <span class="btn-text white bold">Download</span>
+    <img
+      width="24px"
+      src="https://sci-hub.se/misc/img/ravenround.gif"
+      alt="SciHub Logo"
+    />
+    <br>
+    <span class="btn-text white">Access on Sci-Hub</span>
+  </a>
+  `;
+  element.style.cssText = "margin-top: var(--pharos-spacing-1-x);";
+  menu.appendChild(element);
+}
+
 function wiley() {
   const doiLinks = Array.from(document.querySelectorAll("a"))
     .filter((a) => a.href.includes("doi.org"))
@@ -207,6 +229,8 @@ function addSciHubLink() {
     wiley();
   } else if (url.includes("link.springer.com")) {
     springerLink();
+  } else if (url.includes("jstor.org")) {
+    jstor();
   }
 }
 
