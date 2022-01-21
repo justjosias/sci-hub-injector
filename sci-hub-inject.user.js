@@ -19,8 +19,16 @@
 // @include https://www.degruyter.com/*
 // ==/UserScript==
 
+const default_url = "https://sci-hub.se/";
+
 function sciHubLink(doi) {
-  return `https://sci-hub.se/${doi}`;
+  let url = default_url;
+  try {
+    browser.storage.local.get("url").then((url_item) => url = url_item.url);
+  } catch (error) {
+    // ignore and use the default url
+  }
+  return url + doi;
 }
 
 function pubMed() {

@@ -25,6 +25,16 @@
       "js": ["sci-hub-inject.user.js"]
     }
   ],
+
+  "permissions": ["storage"],
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "chrome_style": true,
+    "open_in_tab": false
+  },
+
   "icons": {
     "160": "icon.png"
   }
