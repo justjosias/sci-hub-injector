@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Sci Hub Injector
-// @version 1.2
+// @version 1.2.1
 // @updateURL https://raw.githubusercontent.com/justjosias/sci-hub-injector/main/sci-hub-inject.user.js
 // @description Adds SciHub links to popular publishing websites to make free access to science even easier.
 // @icon https://raw.githubusercontent.com/justjosias/sci-hub-injector/main/icon.png
