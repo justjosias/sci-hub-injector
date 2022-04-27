@@ -1,7 +1,7 @@
 {
   "name": "Sci Hub Injector",
   "description": "Adds SciHub links to popular publishing websites to make free access to science even easier.",
-  "version": "1.2",
+  "version": "1.2.1",
   "permissions": [],
   "manifest_version": 2,
   "content_scripts": [
