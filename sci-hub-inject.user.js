@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Sci Hub Injector
-// @version 1.2
+// @version 1.2.1
 // @updateURL https://raw.githubusercontent.com/justjosias/sci-hub-injector/main/sci-hub-inject.user.js
 // @description Adds SciHub links to popular publishing websites to make free access to science even easier.
 // @icon https://raw.githubusercontent.com/justjosias/sci-hub-injector/main/icon.png
@@ -207,6 +207,8 @@ function springerLink() {
     springerLinkJournal();
   } else if (url.includes("article")) {
     springerLinkArticle(doi);
+  } else if (url.includes("chapter")) {
+    springerLinkChapter(doi);
   } else {
     springerLinkGeneral(doi);
   }
@@ -236,6 +238,17 @@ function springerLinkArticle(doi) {
       <img width=24 height=24 src="https://sci-hub.se/misc/img/ravenround.gif" style="vertical-align:bottom"/>
       View On SciHub
     </a>
+  `;
+}
+
+function springerLinkChapter(doi) {
+  const contextContainer = document.querySelector("#altmetric-container > div > ul");
+  contextContainer.innerHTML += `
+    <li class="c-article-metrics-bar__item">
+    <p class="c-article-metrics-bar__count">
+    <a href="${sciHubLink(doi)}" title="SciHub">Sci-Hub</a>
+    </p>
+    </li>
   `;
 }
 
