@@ -20,7 +20,8 @@
         "https://journals.sagepub.com/*",
         "https://www.degruyter.com/*",
         "https://ieeexplore.ieee.org/*",
-        "https://journals.sagepub.com/*"
+        "https://journals.sagepub.com/*",
+        "https://dl.acm.org/doi/*"
       ],
       "js": ["sci-hub-inject.user.js"]
     }

@@ -17,6 +17,7 @@
 // @include https://ieeexplore.ieee.org/*
 // @include https://journals.sagepub.com/*
 // @include https://www.degruyter.com/*
+// @include https://dl.acm.org/doi/*
 // ==/UserScript==
 
 const default_url = "https://sci-hub.se/";
@@ -280,7 +281,7 @@ function ieeexploreLink() {
     `;
   }
 
-  
+
 function sagePub() {
   const doi = document.querySelector("meta[scheme='doi']").getAttribute("content");
   const menu = document.querySelector(".pdf-wrapper");
@@ -314,6 +315,22 @@ function deGruyter() {
   }
 }
 
+function acm() {
+    const url = document.location.href;
+    // Regex for finding DOI in URL
+    const regex = /10.\d{4,9}\/[-._;()/:A-Z0-9]+/i;
+    let m;
+    if ((m = regex.exec(url)) !== null) {
+        const doi = m[0];
+        const menu = document.querySelector(".get-access").parentElement.parentElement;
+        menu.innerHTML += `
+        <li>
+            <a href="${sciHubLink(doi)}" class="get-access" >Access on SciHub</a>
+        </li>
+        `;
+    }
+}
+
 function addSciHubLink() {
   const url = document.location.href;
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
@@ -342,6 +359,8 @@ function addSciHubLink() {
     sagePub();
   } else if (url.includes("degruyter.com")) {
     deGruyter();
+  } else if (url.includes("dl.acm.org/doi")) {
+    acm();
   }
 }
 
