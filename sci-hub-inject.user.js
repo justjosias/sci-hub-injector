@@ -266,20 +266,20 @@ function springerLinkGeneral(doi) {
 }
 
 function ieeexploreLink() {
-    let foundLinks = [];
-    document.querySelectorAll("a").forEach(l => {
-        if (l.href.includes("doi.org")) {
-            foundLinks.push(l.href);
-        }
-    });
-    const doi = foundLinks[0].split(".org/")[1];
-    const node = document.querySelector(".document-header-title-container .btn-container");
-    node.innerHTML += `
+  let foundLinks = [];
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.includes("doi.org")) {
+      foundLinks.push(l.href);
+    }
+  });
+  const doi = foundLinks[0].split(".org/")[1];
+  const node = document.querySelector(".document-header-title-container .btn-container");
+  node.innerHTML += `
         <button placement="bottom" class="layout-btn-white cite-this-btn">
             <a href="${sciHubLink(doi)}">Access on SciHub</a>
         </button>
     `;
-  }
+}
 
 
 function sagePub() {
