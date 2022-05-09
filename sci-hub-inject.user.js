@@ -273,10 +273,10 @@ function ieeexploreLink() {
         }
     });
     const doi = foundLinks[0].split(".org/")[1];
-    const node = document.querySelectorAll(".document-banner > button")[0];
-    node.outerHTML += `
-        <button class="sip-modal-button stats-document-banner-viewDocument" onClick="window.open('${sciHubLink(doi)}', '__blank__')">
-            <div class="main-txt"> SciHub </div>
+    const node = document.querySelector(".document-header-title-container .btn-container");
+    node.innerHTML += `
+        <button placement="bottom" class="layout-btn-white cite-this-btn">
+            <a href="${sciHubLink(doi)}">Access on SciHub</a>
         </button>
     `;
   }
