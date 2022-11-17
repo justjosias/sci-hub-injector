@@ -18,6 +18,7 @@
 // @include https://journals.sagepub.com/*
 // @include https://www.degruyter.com/*
 // @include https://dl.acm.org/doi/*
+// @include https://www.connectedpapers.com/*
 // ==/UserScript==
 
 const default_url = "https://sci-hub.se/";
@@ -281,6 +282,28 @@ function ieeexploreLink() {
     `;
 }
 
+function connectedpapers() {
+    console.log("Running connectedpapers injector")
+    // for all objects in open-in-icon class, find the one with https://doi.org/10.1145/2968478.2968502 href
+    let foundLinks = [];
+    document.querySelectorAll("a.open-in-icon").forEach(l => {
+        if (l.href.includes("doi.org")) {
+            foundLinks.push(l.href);
+        }
+    });
+
+    if (foundLinks.length !== 1) {
+        console.error("Found != 1 doi links: ", foundLinks);
+    }
+    const doi = foundLinks[0].split(".org/")[1];
+    console.log("found doi: " + doi);
+
+    const node = document.querySelector(".open-in-text");
+    console.log("Found node ", node, " to add link");
+
+    node.insertAdjacentHTML('beforeend', `<a href="${sciHubLink(doi)}">SciHub</a>`);
+    console.log("Added link");
+}
 
 function sagePub() {
   const doi = document.querySelector("meta[scheme='doi']").getAttribute("content");
@@ -333,6 +356,7 @@ function acm() {
 
 function addSciHubLink() {
   const url = document.location.href;
+    console.log("Running sci-hub-inject")
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
     pubMed();
   } else if (url.includes("nature.com")) {
@@ -360,7 +384,9 @@ function addSciHubLink() {
   } else if (url.includes("degruyter.com")) {
     deGruyter();
   } else if (url.includes("dl.acm.org/doi")) {
-    acm();
+      acm();
+  } else if (url.includes("connectedpapers.com")) {
+      connectedpapers();
   }
 }
 
