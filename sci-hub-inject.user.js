@@ -18,6 +18,7 @@
 // @include https://journals.sagepub.com/*
 // @include https://www.degruyter.com/*
 // @include https://dl.acm.org/doi/*
+// @include https://journals.aps.org/*
 // ==/UserScript==
 
 const default_url = "https://sci-hub.se/";
@@ -331,6 +332,16 @@ function acm() {
     }
 }
 
+function aps() {
+  const url = document.location.href;
+  const doi = document.querySelector("meta[name='citation_doi']").getAttribute("content");
+  const menu = document.querySelector(".article-nav-actions");
+  menu.innerHTML += `
+  <a href="${sciHubLink(doi)}" class="small button">Access on SciHub</a>
+  `;
+
+}
+
 function addSciHubLink() {
   const url = document.location.href;
   if (url.includes("pubmed.ncbi.nlm.nih.gov")) {
@@ -361,6 +372,8 @@ function addSciHubLink() {
     deGruyter();
   } else if (url.includes("dl.acm.org/doi")) {
     acm();
+  } else if (url.includes("journals.aps.org")) {
+    aps();
   }
 }
 
